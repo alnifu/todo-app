@@ -1,38 +1,94 @@
-.App {
+body {
+  font-family: 'Bradley Hand ITC', cursive;
+  background-color: #f7f5ae;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  background-color: #fffdf0;
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-left: 5px solid #d4af37;
+  border-right: 5px solid #d4af37;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+h1 {
   text-align: center;
+  color: #6b6b47;
+  font-size: 32px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  padding: 10px 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 18px;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.addtodo input{
+  flex: 1;
+  padding: 5px;
+  font-family: 'Bradley Hand ITC', cursive;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #d4af37;
+  background-color: transparent;
+  margin-right: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addtodo button{
+  background-color: #ffdf6c;
+  border: none;
+  padding: 8px 15px;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #6b6b47;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Bradley Hand ITC', cursive;
+}
+.addtodo button:hover{
+  background-color: #d8b740;
+}
+li input {
+  flex: 1;
+  padding: 5px;
+  font-family: 'Bradley Hand ITC', cursive;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #d4af37;
+  background-color: transparent;
+}
+
+li button {
+  background-color: #ffdf6c;
+  border: none;
+  padding: 8px 15px;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #6b6b47;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Bradley Hand ITC', cursive;
+}
+
+li button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+li button:hover:not(:disabled) {
+  background-color: #d8b740;
 }
