@@ -16,7 +16,7 @@ function TodoList() {
 
     const completeTodo = (index) => {
         const updatedTodos = todos.map((todo, i) =>
-            i === index ? { ...todo, completed: true } : todo
+            i === index ? { ...todo, completed: !todo.completed } : todo
         );
         setTodos(updatedTodos);
     };

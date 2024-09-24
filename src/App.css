@@ -37,8 +37,32 @@ li {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
-.addtodo input{
+.hoverItem button {
+  padding: 5px 15px;
   flex: 1;
+  border-radius: 7px;
+  background-color: #fffdf0;  
+  font-family: 'Bradley Hand ITC', cursive;
+  font-size: 18px;
+  border: none;
+
+}
+
+.hoverItem button:hover {
+  background-color: #fff9d2;
+  
+}
+
+.addtodo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.addtodo input{
   padding: 5px;
   font-family: 'Bradley Hand ITC', cursive;
   font-size: 18px;
@@ -62,17 +86,18 @@ li {
 .addtodo button:hover{
   background-color: #d8b740;
 }
-li input {
+.modinput {
   flex: 1;
   padding: 5px;
   font-family: 'Bradley Hand ITC', cursive;
   font-size: 16px;
+  margin-right: 5px;
   border: none;
   border-bottom: 2px solid #d4af37;
   background-color: transparent;
 }
 
-li button {
+.modbutton {
   background-color: #ffdf6c;
   border: none;
   padding: 8px 15px;
@@ -84,11 +109,11 @@ li button {
   font-family: 'Bradley Hand ITC', cursive;
 }
 
-li button:disabled {
+.modbutton:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
 
-li button:hover:not(:disabled) {
+.modbutton:hover:not(:disabled) {
   background-color: #d8b740;
 }

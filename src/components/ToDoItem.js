@@ -14,20 +14,21 @@ function TodoItem({ todo, completeTodo, editTodo, removeTodo }) {
             {isEditing ? (
                 <>
                     <input
+                        className='modinput'
                         type="text"
                         value={editText}
                         onChange={(e) => setEditText(e.target.value)}
                     />
-                    <button onClick={handleSave}>Save</button>
+                    <button className='modbutton' onClick={handleSave}>Save</button>
                 </>
             ) : (
                 <>
-                    <p style={{ textDecoration: todo.completed ? 'line-through' : 'none' }} onClick={completeTodo} disabled={todo.completed}>{todo.text}</p>
+                    <div className='hoverItem' onClick={completeTodo} disabled={todo.completed} ><button style={{ textDecoration: todo.completed ? 'line-through' : 'none' }} >{todo.text}</button></div>
                     <div>
-                    <button onClick={() => setIsEditing(true)} disabled={todo.completed}>
+                    <button className='modbutton' onClick={() => setIsEditing(true)} disabled={todo.completed}>
                         Edit
                     </button>
-                    <button onClick={removeTodo} disabled={todo.completed}>Remove</button>
+                    <button className='modbutton' onClick={removeTodo} disabled={todo.completed}>Remove</button>
                     </div>
                 </>
             )}
