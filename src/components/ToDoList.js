@@ -9,6 +9,8 @@ function TodoList() {
         if (newTodo.trim() !== '') {
             setTodos([...todos, { text: newTodo, completed: false }]);
             setNewTodo('');
+        } else {
+            alert('Please enter a valid todo.');
         }
     };
 
